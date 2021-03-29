@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{6BDAB9CE-442E-4993-8960-69AF23C9E0AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "Vehicle\Vehicle.csproj", "{CAAD7049-F5A2-4096-A69A-531997BEB378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicle", "Vehicle\Vehicle.csproj", "{CAAD7049-F5A2-4096-A69A-531997BEB378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentWorker", "DocumentWorker\DocumentWorker.csproj", "{081E0396-023C-48DD-A3DB-D51B091C1359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CAAD7049-F5A2-4096-A69A-531997BEB378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAAD7049-F5A2-4096-A69A-531997BEB378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAAD7049-F5A2-4096-A69A-531997BEB378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{081E0396-023C-48DD-A3DB-D51B091C1359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{081E0396-023C-48DD-A3DB-D51B091C1359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{081E0396-023C-48DD-A3DB-D51B091C1359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{081E0396-023C-48DD-A3DB-D51B091C1359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
