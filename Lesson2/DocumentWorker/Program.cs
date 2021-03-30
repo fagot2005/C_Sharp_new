@@ -25,7 +25,24 @@ namespace DocumentWorker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string ansver;
+            Console.WriteLine("Enter key App or press ENTER.");
+            ansver = Console.ReadLine();
+            if (String.Equals(ansver, "exp"))
+            {
+                DocumentWorker documentWorker = new ExpertDocumentWorker();
+                documentWorker.OpenDocument();
+                documentWorker.EditDocument();
+                documentWorker.SaveDocument();
+            }
+            else
+            {
+                DocumentWorker documentWorker = new ProDocumentWorker();
+                documentWorker.OpenDocument();
+                documentWorker.SaveDocument();
+            }
+            
+            //Console.WriteLine("Hello World!");
         }
     }
 
@@ -59,6 +76,14 @@ namespace DocumentWorker
         public override void SaveDocument()
         {
             Console.WriteLine("Документ сохранен в старом формате, сохранение в остальных форматах доступно в версии Эксперт");
+        }
+    }
+
+    class ExpertDocumentWorker : DocumentWorker
+    {
+        public override void SaveDocument()
+        {
+            Console.WriteLine("Документ сохранен в новом формате");
         }
     }
 }
