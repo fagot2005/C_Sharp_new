@@ -25,24 +25,19 @@ namespace DocumentWorker
     {
         static void Main(string[] args)
         {
+            DocumentWorker resalt = new DocumentWorker();
             string ansver;
             Console.WriteLine("Enter key App or press ENTER.");
             ansver = Console.ReadLine();
             if (String.Equals(ansver, "exp"))
-            {
-                DocumentWorker documentWorker = new ExpertDocumentWorker();
-                documentWorker.OpenDocument();
-                documentWorker.EditDocument();
-                documentWorker.SaveDocument();
-            }
+                resalt = new ExpertDocumentWorker();
+            else if (String.Equals(ansver, "pro"))
+                resalt = new ProDocumentWorker();
             else
-            {
-                DocumentWorker documentWorker = new ProDocumentWorker();
-                documentWorker.OpenDocument();
-                documentWorker.SaveDocument();
-            }
-            
-            //Console.WriteLine("Hello World!");
+                resalt = new DocumentWorker();
+            resalt.OpenDocument();
+            resalt.EditDocument();
+            resalt.SaveDocument();
         }
     }
 
@@ -79,7 +74,7 @@ namespace DocumentWorker
         }
     }
 
-    class ExpertDocumentWorker : DocumentWorker
+    class ExpertDocumentWorker : ProDocumentWorker
     {
         public override void SaveDocument()
         {

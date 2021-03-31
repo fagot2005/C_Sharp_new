@@ -27,8 +27,9 @@ namespace Abstraction
             {
                 element.Open();
                 element.Create();
-                element.Create();
+                element.Chenge();
                 element.Save();
+                Console.WriteLine("Type document {0}", element.GetType().Name.Substring(0, 3));
                 Console.WriteLine(new string('-', 50));
             }
             Console.ReadKey();
@@ -38,13 +39,21 @@ namespace Abstraction
     abstract class AbstractHandler
     {
         public virtual void Open()
-        { }
+        {
+            Console.WriteLine("Metod Save not override for class");
+        }
         public virtual void Create()
-        { }
+        {
+            Console.WriteLine("Metod Save not override for class");
+        }
         public virtual void Chenge()
-        { }
+        {
+            Console.WriteLine("Metod Save not override for class");
+        }
         public virtual void Save()
-        { }
+        {
+            Console.WriteLine("Metod Save not override for class");
+        }
     }
 
     class XMLHandler : AbstractHandler
@@ -109,9 +118,9 @@ namespace Abstraction
             Console.WriteLine("Chenge DOC");
         }
 
-        public override void Save()
-        {
-            Console.WriteLine("Save DOC");
-        }
+        //public override void Save()
+        //{
+        //    Console.WriteLine("Save DOC");
+        //}
     }
 }
