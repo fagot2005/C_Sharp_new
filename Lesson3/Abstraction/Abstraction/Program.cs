@@ -32,6 +32,7 @@ namespace Abstraction
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
+                    break;
                 }
                 if (element is TXTHandler)
                 {
@@ -40,6 +41,7 @@ namespace Abstraction
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
+                    break;
                 }
                 if (element is DOCHandler)
                 {
@@ -48,6 +50,7 @@ namespace Abstraction
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
+                    break;
                 }
             }
             Console.WriteLine("ХА Ха ХА");
