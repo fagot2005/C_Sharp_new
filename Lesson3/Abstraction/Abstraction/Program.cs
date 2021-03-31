@@ -32,25 +32,22 @@ namespace Abstraction
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
-                    continue;
                 }
-                if (element is TXTHandler)
+                else if (element is TXTHandler)
                 {
                     element.Open();
                     element.Create();
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
-                    continue;
                 }
-                if (element is DOCHandler)
+                else if (element is DOCHandler)
                 {
                     element.Open();
                     element.Create();
                     element.Create();
                     element.Save();
                     Console.WriteLine(new string('-', 50));
-                    continue;
                 }
             }
             Console.WriteLine("ХА Ха ХА");
