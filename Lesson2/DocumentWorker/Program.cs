@@ -25,19 +25,19 @@ namespace DocumentWorker
     {
         static void Main(string[] args)
         {
-            DocumentWorker resalt = new DocumentWorker();
+            DocumentWorker documentWorker = new DocumentWorker();
             string ansver;
             Console.WriteLine("Enter key App or press ENTER.");
             ansver = Console.ReadLine();
             if (String.Equals(ansver, "exp"))
-                resalt = new ExpertDocumentWorker();
+                documentWorker = new ExpertDocumentWorker();
             else if (String.Equals(ansver, "pro"))
-                resalt = new ProDocumentWorker();
+                documentWorker = new ProDocumentWorker();
             else
-                resalt = new DocumentWorker();
-            resalt.OpenDocument();
-            resalt.EditDocument();
-            resalt.SaveDocument();
+                documentWorker = new DocumentWorker();
+            documentWorker.OpenDocument();
+            documentWorker.EditDocument();
+            documentWorker.SaveDocument();
         }
     }
 
