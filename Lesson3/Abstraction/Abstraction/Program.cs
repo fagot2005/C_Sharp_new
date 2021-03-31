@@ -25,32 +25,12 @@ namespace Abstraction
             list.Add(new DOCHandler());
             foreach (AbstractHandler element in list)
             {
-                if (element is XMLHandler)
-                {
-                    element.Open();
-                    element.Create();
-                    element.Create();
-                    element.Save();
-                    Console.WriteLine(new string('-', 50));
-                }
-                else if (element is TXTHandler)
-                {
-                    element.Open();
-                    element.Create();
-                    element.Create();
-                    element.Save();
-                    Console.WriteLine(new string('-', 50));
-                }
-                else if (element is DOCHandler)
-                {
-                    element.Open();
-                    element.Create();
-                    element.Create();
-                    element.Save();
-                    Console.WriteLine(new string('-', 50));
-                }
+                element.Open();
+                element.Create();
+                element.Create();
+                element.Save();
+                Console.WriteLine(new string('-', 50));
             }
-            Console.WriteLine("ХА Ха ХА");
             Console.ReadKey();
         }
     }
