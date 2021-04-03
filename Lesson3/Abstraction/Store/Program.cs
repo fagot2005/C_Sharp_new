@@ -26,49 +26,58 @@ namespace Store
             Console.WriteLine("Enter article index");
             int index = Convert.ToInt32(Console.ReadLine());
             if (index <= 3)
-                Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store.Article[index].ArticleName, store.Article[index].StoreName, store.Article[index].Price);
-            Console.WriteLine("Enter article name");
-            string name = Console.ReadLine();
-            int countarticle = 0;
-            for (int i = 0; i < store.Article.Length; i++)
-            {
-                if (String.Equals(store.Article[i].ArticleName, name))
-                {
-                    Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store.Article[i].ArticleName, store.Article[i].StoreName, store.Article[i].Price);
-                    countarticle++;
-                    break;
-                }
-            }
-            if (countarticle == 0)
-                Console.WriteLine("Article with name {0} not found.", name);
+                Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store[index].ArticleName, store[index].StoreName, store[index].Price);
+            //Console.WriteLine("Enter article name");
+            //string name = Console.ReadLine();
+            //int countarticle = 0;
+            //for (int i = 0; i < store.Article.Length; i++)
+            //{
+            //    if (String.Equals(store.Article[i].ArticleName, name))
+            //    {
+            //        Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store.Article[i].ArticleName, store.Article[i].StoreName, store.Article[i].Price);
+            //        countarticle++;
+            //        break;
+            //    }
+            //}
+            //if (countarticle == 0)
+            //    Console.WriteLine("Article with name {0} not found.", name);
             Console.ReadKey();
         }
     }
 
     class Store
     {
-        public Article[] Article { get; set; }
+        //public Article[] Article { get; set; }
+
+        private Article[] array = new Article[4];
+
+        public Article this[int index]
+        {
+            get
+            {
+                return array[index];
+            }
+            set
+            {
+                array[index] = value;
+            }
+        }
 
         public Store()
         {
-            Article[] array = new Article[4];
-            Article milk = new Article("Milk", "ATB", 28.7);
-            Article cola = new Article("Coca-Cola", "Novus", 19.99);
-            Article bread = new Article("Borodinsky", "Cilpo", 12.80);
-            Article orange = new Article("Orange", "ATB", 32.50);
-            array[0] = milk;
-            array[1] = cola;
-            array[2] = bread;
-            array[3] = orange;
-            this.Article = array;
+            array[0] = new Article("Milk", "ATB", 28.7);
+            array[1] = new Article("Coca-Cola", "Novus", 19.99);
+            array[2] = new Article("Borodinsky", "Cilpo", 12.80);
+            array[3] = new Article("Orange", "ATB", 32.50);
+            //this.Article = array;
         }
     }
 
     class Article
     {
-        private string articleName;
-        private string storeName;
-        private double price;
+        public string ArticleName { get; set; }
+        public string StoreName { get; set; }
+        public double Price { get; set; }
 
         public Article(string articleName, string storeName, double price)
         {
@@ -76,9 +85,5 @@ namespace Store
             StoreName = storeName;
             Price = price;
         }
-
-        public string ArticleName { get => articleName; set => articleName = value; }
-        public string StoreName { get => storeName; set => storeName = value; }
-        public double Price { get => price; set => price = value; }
     }
 }
