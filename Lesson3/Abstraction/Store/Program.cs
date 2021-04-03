@@ -66,9 +66,9 @@ namespace Store
 
     class Article
     {
-        public string ArticleName { get; set; }
-        public string StoreName { get; set; }
-        public double Price { get; set; }
+        private string articleName;
+        private string storeName;
+        private double price;
 
         public Article(string articleName, string storeName, double price)
         {
@@ -76,5 +76,9 @@ namespace Store
             StoreName = storeName;
             Price = price;
         }
+
+        public string ArticleName { get => articleName; set => articleName = value; }
+        public string StoreName { get => storeName; set => storeName = value; }
+        public double Price { get => price; set => price = value; }
     }
 }
