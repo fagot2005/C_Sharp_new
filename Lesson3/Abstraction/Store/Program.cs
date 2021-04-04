@@ -25,22 +25,14 @@ namespace Store
             Store store = new Store();
             Console.WriteLine("Enter article index");
             int index = Convert.ToInt32(Console.ReadLine());
-            if (index <= 3)
+            if (store[index] != null)
                 Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store[index].ArticleName, store[index].StoreName, store[index].Price);
-            //Console.WriteLine("Enter article name");
-            //string name = Console.ReadLine();
-            //int countarticle = 0;
-            //for (int i = 0; i < store.Article.Length; i++)
-            //{
-            //    if (String.Equals(store.Article[i].ArticleName, name))
-            //    {
-            //        Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store.Article[i].ArticleName, store.Article[i].StoreName, store.Article[i].Price);
-            //        countarticle++;
-            //        break;
-            //    }
-            //}
-            //if (countarticle == 0)
-            //    Console.WriteLine("Article with name {0} not found.", name);
+            else Console.WriteLine("Index {0} does not exist", index);
+            Console.WriteLine("Enter article name");
+            string name = Console.ReadLine();
+            if (store[name] != null)
+                Console.WriteLine("ArticleName {0}, Store {1}, Price {2}", store[name].ArticleName, store[name].StoreName, store[name].Price);
+            else Console.WriteLine("Article with name {0} not found.", name);
             Console.ReadKey();
         }
     }
@@ -49,13 +41,15 @@ namespace Store
     {
         //public Article[] Article { get; set; }
 
-        private Article[] array = new Article[4];
+        private Article[] array = new Article[5];
 
         public Article this[int index]
         {
             get
             {
-                return array[index];
+                if (index <= 4 & index >= 0)
+                    return array[index];
+                else return null;
             }
             set
             {
@@ -63,13 +57,28 @@ namespace Store
             }
         }
 
+        public Article this[string name]
+        {
+            get
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (String.Equals(array[i].ArticleName, name))
+                    {
+                        return array[i];
+                    }
+                }
+                return null;
+            }
+        }
+
         public Store()
         {
             array[0] = new Article("Milk", "ATB", 28.7);
+            array[4] = new Article("Milk", "Novus", 34.7);
             array[1] = new Article("Coca-Cola", "Novus", 19.99);
             array[2] = new Article("Borodinsky", "Cilpo", 12.80);
             array[3] = new Article("Orange", "ATB", 32.50);
-            //this.Article = array;
         }
     }
 
