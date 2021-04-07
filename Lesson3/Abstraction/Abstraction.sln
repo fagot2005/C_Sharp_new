@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegation", "Delegation\Delegation.csproj", "{AE1B588D-72AC-4C3F-B78B-586F7E916230}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structure", "Structure\Structure.csproj", "{7D27DC68-102B-4FC6-B35E-5E3F912646C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accauntant", "Structure\Accauntant.csproj", "{7D27DC68-102B-4FC6-B35E-5E3F912646C2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Static", "Static\Static.csproj", "{3BBF8B5C-3272-4213-9CDE-BDA14875E671}"
 EndProject
