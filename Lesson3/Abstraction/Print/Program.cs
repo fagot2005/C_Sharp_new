@@ -14,8 +14,8 @@ namespace Print
     {
         static void Main(string[] args)
         {
-            bool boll = true;
-            while (boll)
+            //bool boll = true;
+            while (true)
             {
                 Console.Clear();
                 Console.WriteLine("ВВЕДИ СЛОВО");
@@ -25,9 +25,8 @@ namespace Print
                 Print.PrintM(str, color);
                 Console.WriteLine("ПРОДОЛЖИТЬ - 1, НЕТ - 2");
                 string answer = Console.ReadLine();
-                if (String.Equals(answer, "1"))
-                    boll = true;
-                else boll = false;
+                if (String.Equals(answer, "2"))
+                    break;
             }
         }
 
