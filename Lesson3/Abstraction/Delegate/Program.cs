@@ -13,6 +13,8 @@ namespace Delegate
 
     class Program
     {
+        delegate double MyDel(int x, int y);
+
         static void Main(string[] args)
         {
             Console.WriteLine("Input first veriable.");
@@ -21,38 +23,36 @@ namespace Delegate
             int second = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Input operation: 1- Summ, 2- Sub, 3 - Mul, 4 - Div.");
             int operation = Convert.ToInt16(Console.ReadLine());
-            int res = 0;
+            MyDel resalt = null;
             switch (operation)
             {
                 case 1:
-                    Console.WriteLine(Summ(first, second));
+                    resalt = (first, second) => { return first + second; };
                     break;
                 case 2:
-                    Console.WriteLine(Sub(first, second));
+                    resalt = (first, second) => first - second;
                     break;
                 case 3:
-                    Console.WriteLine(Mul(first, second));
+                    resalt = (first, second) => first * second;
                     break;
                 case 4:
-                    Div(first, second);
+                    resalt = (first, second) =>
+                    {
+                        if (second == 0)
+                        {
+                            Console.WriteLine("Делить на ноль нельзя");
+                            return 0;
+                        }
+                        else
+                            return first / (double)second;
+                    };
                     break;
                 default:
                     Console.WriteLine("Operation isn't corect.");
                     break;
             }
-
-            static int Summ(int x, int y) => x + y;
-            static int Sub(int x, int y) => x - y;
-            static int Mul(int x, int y) => x * y;
-            static int Div(int x, int y)
-            {
-                if (y == 0)
-                {
-                    Console.WriteLine("You cannot divide by zero.");
-                    return 0;
-                }
-                return x / y;
-            }
+            if (resalt != null)
+                Console.WriteLine(resalt(first, second));
         }
     }
 }
