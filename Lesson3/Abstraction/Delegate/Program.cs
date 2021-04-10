@@ -34,7 +34,7 @@ namespace Delegate
                     Console.WriteLine(Mul(first, second));
                     break;
                 case 4:
-                    if (second == 0)
+                    if (Div(first, second) == 0)
                         Console.WriteLine("You cannot divide by zero.");
                     else Console.WriteLine(Div(first, second));
                     break;
@@ -46,7 +46,7 @@ namespace Delegate
             static int Summ(int x, int y) => x + y;
             static int Sub(int x, int y) => x - y;
             static int Mul(int x, int y) => x * y;
-            static int Div(int x, int y) => x / y;
+            static int Div(int x, int y) => (y == 0) ? 0 : x / y;
         }
     }
 }
