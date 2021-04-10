@@ -34,9 +34,7 @@ namespace Delegate
                     Console.WriteLine(Mul(first, second));
                     break;
                 case 4:
-                    if (Div(first, second) == 0)
-                        Console.WriteLine("You cannot divide by zero.");
-                    else Console.WriteLine(Div(first, second));
+                    Div(first, second);
                     break;
                 default:
                     Console.WriteLine("Operation isn't corect.");
@@ -46,7 +44,15 @@ namespace Delegate
             static int Summ(int x, int y) => x + y;
             static int Sub(int x, int y) => x - y;
             static int Mul(int x, int y) => x * y;
-            static int Div(int x, int y) => (y == 0) ? 0 : x / y;
+            static int Div(int x, int y)
+            {
+                if (y == 0)
+                {
+                    Console.WriteLine("You cannot divide by zero.");
+                    return 0;
+                }
+                return x / y;
+            }
         }
     }
 }
