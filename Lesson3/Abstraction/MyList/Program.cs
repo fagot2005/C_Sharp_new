@@ -28,6 +28,7 @@ namespace MyList
             Console.WriteLine(new string('-', 50));
             Console.WriteLine("In list {0} elements.", list.Count);
             list.Reset();
+            Console.WriteLine("In list {0} elements.", list.Count);
             Console.ReadKey();
         }
     }

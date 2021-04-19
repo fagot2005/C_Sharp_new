@@ -50,7 +50,7 @@ namespace MyList
         public void Reset()
         {
             poss = -1;
-            Array.Clear(array, 0, array.Length);
+            array = new T[0];
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -65,7 +65,7 @@ namespace MyList
                 }
                 else
                 {
-                    Reset();
+                    //Reset();
                     yield break;
                 }
             }
