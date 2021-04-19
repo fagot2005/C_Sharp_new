@@ -13,15 +13,17 @@ namespace MyList
 
         public MyList()
         {
-            array = new T[5];
+            array = new T[0];
         }
+
+        public int Count { get { return array.Length; }}
 
         public void Add(T elem)
         {
             if (poss == array.Length - 1)
             {
 
-                T[] arr = new T[array.Length * 2];
+                T[] arr = new T[array.Length + 1];
                 array.CopyTo(arr, 0);
                 array = arr;
                 poss++;
@@ -48,6 +50,7 @@ namespace MyList
         public void Reset()
         {
             poss = -1;
+            Array.Clear(array, 0, array.Length);
         }
 
         public IEnumerator<T> GetEnumerator()

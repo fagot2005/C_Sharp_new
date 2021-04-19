@@ -19,12 +19,15 @@ namespace MyList
             MyList<int> list = new MyList<int>();
             for (int i = 0; i < 50; i++)
             {
-                list.Add(i+1);
+                list.Add(i + 1);
             }
             foreach (var element in list)
             {
                 Console.WriteLine(element);
             }
+            Console.WriteLine(new string('-', 50));
+            Console.WriteLine("In list {0} elements.", list.Count);
+            list.Reset();
             Console.ReadKey();
         }
     }
