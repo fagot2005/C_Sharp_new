@@ -24,7 +24,7 @@ namespace Event
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label1.Text = "";
+            Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -34,8 +34,21 @@ namespace Event
 
         public void AddText(string endSymbol)
         {
-            label1.Text = label1.Text + textBox1.Text + endSymbol;
+            label1.Text = label1.Text + endSymbol;
             textBox1.Clear();
+        }
+
+        public void Clear()
+        {
+            label1.Text = "";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b')
+                label1.Text = label1.Text + e.KeyChar;
+            else
+                label1.Text = label1.Text.Remove(label1.Text.Length - 1);
         }
     }
 }
