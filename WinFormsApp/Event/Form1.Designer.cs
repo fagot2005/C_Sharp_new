@@ -52,7 +52,6 @@ namespace Event
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(253, 23);
             this.textBox1.TabIndex = 1;
-            //this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label1
@@ -86,6 +85,7 @@ namespace Event
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(412, 259);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -93,7 +93,7 @@ namespace Event
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MyFirstWinAPP";
             this.ResumeLayout(false);
             this.PerformLayout();
 
