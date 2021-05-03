@@ -34,7 +34,12 @@ namespace Calculator
                     Console.WriteLine("Mul of {0} and {1} = {2}", calculator.First, calculator.Second, calculator.Mul(calculator));
                     break;
                 case 4:
-                    Console.WriteLine("Div of {0} and {1} = {2}", calculator.First, calculator.Second, calculator.Div(calculator));
+                    int? res = calculator.Div(calculator);
+                    if (res == null)
+                    {
+                        Console.WriteLine("Div of 0 not emposible");
+                    }
+                    else Console.WriteLine("Div of {0} and {1} = {2}", calculator.First, calculator.Second, res);
                     break;
                 default:
                     Console.WriteLine("Input not imposible operation");

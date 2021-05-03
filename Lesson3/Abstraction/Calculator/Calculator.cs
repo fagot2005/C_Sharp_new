@@ -22,7 +22,7 @@ namespace Calculator
             return calculator.First + calculator.Second;
         }
 
-        public int Sub (Calculator calculator)
+        public int Sub(Calculator calculator)
         {
             return calculator.First - calculator.Second;
         }
@@ -32,12 +32,19 @@ namespace Calculator
             return calculator.First * calculator.Second;
         }
 
-        public double Div(Calculator calculator)
+        public int? Div(Calculator calculator)
         {
-            //Exception ex = new Exception("Div of 0 not emposible");
-            if (calculator.Second == 0)
-                throw new ArgumentNullException("Div of 0 not emposible");
-            return (double) calculator.First / calculator.Second;
+            try
+            {
+                int res = calculator.First / calculator.Second;
+                return res;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Сработало исключение");
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
     }
 }
