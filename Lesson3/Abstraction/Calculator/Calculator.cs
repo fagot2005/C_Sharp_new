@@ -8,43 +8,28 @@ namespace Calculator
 {
     class Calculator
     {
-        public int First { get; set; }
-        public int Second { get; set; }
-
-        public Calculator(int first, int second)
+        public int Add(int first, int second)
         {
-            First = first;
-            Second = second;
+            return first + second;
         }
 
-        public int Add(Calculator calculator)
+        public int Sub(int first, int second)
         {
-            return calculator.First + calculator.Second;
+            return first - second;
         }
 
-        public int Sub(Calculator calculator)
+        public int Mul(int first, int second)
         {
-            return calculator.First - calculator.Second;
+            return first * second;
         }
 
-        public int Mul(Calculator calculator)
+        public double Div(int first, int second)
         {
-            return calculator.First * calculator.Second;
-        }
-
-        public int? Div(Calculator calculator)
-        {
-            try
+            if (second == 0)
             {
-                int res = calculator.First / calculator.Second;
-                return res;
+                throw new ArgumentException("Делит на 0 нельзя!!!");
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Сработало исключение");
-                Console.WriteLine(e.Message);
-                return null;
-            }
+            return (double)first / second;
         }
     }
 }

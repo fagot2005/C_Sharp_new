@@ -19,27 +19,22 @@ namespace Calculator
             int first = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Inpit second int");
             int second = Convert.ToInt32(Console.ReadLine());
-            Calculator calculator = new Calculator(first, second);
+            Calculator calculator = new Calculator();
             Console.WriteLine("Inpit operation: 1- Add, 2 - Sub, 3 - Mul, 4 - Div");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
                 case 1:
-                    Console.WriteLine("Sum of {0} and {1} = {2}", calculator.First, calculator.Second, calculator.Add(calculator));
+                    Console.WriteLine("Sum of {0} and {1} = {2}", first, second, calculator.Add(first, second));
                     break;
                 case 2:
-                    Console.WriteLine("Sub of {0} and {1} = {2}", calculator.First, calculator.Second, calculator.Sub(calculator));
+                    Console.WriteLine("Sub of {0} and {1} = {2}", first, second, calculator.Sub(first, second));
                     break;
                 case 3:
-                    Console.WriteLine("Mul of {0} and {1} = {2}", calculator.First, calculator.Second, calculator.Mul(calculator));
+                    Console.WriteLine("Mul of {0} and {1} = {2}", first, second, calculator.Mul(first, second));
                     break;
                 case 4:
-                    int? res = calculator.Div(calculator);
-                    if (res == null)
-                    {
-                        Console.WriteLine("Div of 0 not emposible");
-                    }
-                    else Console.WriteLine("Div of {0} and {1} = {2}", calculator.First, calculator.Second, res);
+                    Console.WriteLine("Div of {0} and {1} = {2}", first, second, calculator.Div(first, second));
                     break;
                 default:
                     Console.WriteLine("Input not imposible operation");
