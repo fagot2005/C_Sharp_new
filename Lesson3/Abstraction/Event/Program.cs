@@ -20,7 +20,7 @@ namespace Event
         {
             Console.WriteLine("Обработчик события 1");
         }
-        
+
         static private void Handler2()
         {
             Console.WriteLine("Обработчик события 2");

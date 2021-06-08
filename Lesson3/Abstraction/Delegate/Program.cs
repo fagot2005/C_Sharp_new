@@ -27,7 +27,7 @@ namespace Delegate
             switch (operation)
             {
                 case 1:
-                    resalt = (first, second) => first + second; 
+                    resalt = (first, second) => first + second;
                     break;
                 case 2:
                     resalt = (first, second) => first - second;

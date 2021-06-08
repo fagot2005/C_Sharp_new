@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Interfase
+﻿namespace Interfase
 {
     interface IRecodable
     {

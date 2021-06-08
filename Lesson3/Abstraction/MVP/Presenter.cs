@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MVP
 {
@@ -9,7 +6,7 @@ namespace MVP
     {
         private Model model;
         private Program view;
-        
+
 
         public Presenter()
         {

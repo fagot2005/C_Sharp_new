@@ -18,7 +18,7 @@ namespace Worker
         static void Main(string[] args)
         {
             List<Worker> list = new List<Worker>(5);
-            for (int i = 0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine("Enter Name.");
                 string name = Console.ReadLine();
