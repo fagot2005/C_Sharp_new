@@ -11,12 +11,14 @@ namespace AutoShop
 
         public string Name { get; set; }
         public string Phone { get; set; }
+        public string Brand { get; set; }
         public string Model { get; set; }
 
-        public Castomer(string name, string phone, string model)
+        public Castomer(string name, string phone, string brand, string model)
         {
             Name = name;
             Phone = phone;
+            Brand = brand;
             Model = model;
         }
     }

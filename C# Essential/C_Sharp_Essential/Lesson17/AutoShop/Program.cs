@@ -17,19 +17,26 @@ namespace AutoShop
         {
             var carsList = new List<Car>
             {
+                new Car ("BMV", "X3", 2015, "Gray"),
                 new Car ("BMV", "X5", 2019, "Blue"),
-                new Car ("AUDI", "A8", 2020, "White")
+                new Car ("BMV", "X7", 2019, "Red"),
+                new Car ("AUDI", "A6", 2020, "White"),
+                new Car ("AUDI", "A5", 2020, "Pink"),
+                new Car ("AUDI", "A8", 2020, "Black")
             };
 
             var castomersList = new List<Castomer>
             {
-                new Castomer ("Ivan", "0964564435", "BMV"),
-                new Castomer("Petro", "050565432", "AUDI")
+                new Castomer ("Serg", "0956464435", "BMV", "X3"),
+                new Castomer ("Ivan", "0964564435", "BMV", "X5"),
+                new Castomer("Petro", "050565432", "AUDI", "A6"),
+                new Castomer("Stepan", "050987432", "AUDI", "A8"),
+                new Castomer("Anna", "050565432", "AUDI", "A5")
             };
 
             var query =
                     from castomer in castomersList
-                    join auto in carsList on castomer.Model equals auto.Brand
+                    join auto in carsList on (castomer.Brand, castomer.Model) equals (auto.Brand, auto.Model)
                     select new
                     {
                         Name = castomer.Name,
