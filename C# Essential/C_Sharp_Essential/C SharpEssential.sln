@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31402.337
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31410.414
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson16", "Lesson16", "{7583DE69-BA66-4634-9D4A-470E6585213F}"
 EndProject
@@ -89,7 +89,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson17", "Lesson17", "{23
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anonymouse", "Lesson17\Anonymouse\Anonymouse.csproj", "{21147376-2AC5-4D29-98F9-7E09131B50AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShop", "Lesson17\AutoShop\AutoShop.csproj", "{1FF28B9D-70CC-4356-86B4-7C7274FDE750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoShop", "Lesson17\AutoShop\AutoShop.csproj", "{1FF28B9D-70CC-4356-86B4-7C7274FDE750}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson18", "Lesson18", "{A376295C-484A-4E63-BBE1-6A411272DD5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NameSpace", "Lesson18\NameSpace\NameSpace.csproj", "{ABD22159-0BE7-456F-9100-41998C1D3AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Lesson18\Dictionary\Dictionary.csproj", "{C934C418-EAD1-4E37-A596-4EFC865EBE2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -347,6 +353,22 @@ Global
 		{1FF28B9D-70CC-4356-86B4-7C7274FDE750}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FF28B9D-70CC-4356-86B4-7C7274FDE750}.Release|x86.ActiveCfg = Release|Any CPU
 		{1FF28B9D-70CC-4356-86B4-7C7274FDE750}.Release|x86.Build.0 = Release|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5}.Release|x86.Build.0 = Release|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Debug|x86.Build.0 = Debug|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Release|x86.ActiveCfg = Release|Any CPU
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -383,6 +405,8 @@ Global
 		{9F44BBA0-4FA9-4B20-B89C-151FA710BCDE} = {1AEDBA87-131F-4FDF-97AA-E39CF218860A}
 		{21147376-2AC5-4D29-98F9-7E09131B50AF} = {23727605-572F-4119-B66D-5B66EC333DB0}
 		{1FF28B9D-70CC-4356-86B4-7C7274FDE750} = {23727605-572F-4119-B66D-5B66EC333DB0}
+		{ABD22159-0BE7-456F-9100-41998C1D3AF5} = {A376295C-484A-4E63-BBE1-6A411272DD5F}
+		{C934C418-EAD1-4E37-A596-4EFC865EBE2E} = {A376295C-484A-4E63-BBE1-6A411272DD5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F46CC05-61E8-400C-A86D-FFDA1026CA84}
